@@ -361,8 +361,8 @@ begin
             0: begin
              sd_adr_o_read<=3;
              sd_we_o<=0; 
-             next_out[3:0]<=in_dat_buffer[out_buff_ptr_read ];
-             next_out[7:4]<=in_dat_buffer[out_buff_ptr_read+1 ];
+             next_out[3:0]<=in_dat_buffer[out_buff_ptr_read+1 ];
+             next_out[7:4]<=in_dat_buffer[out_buff_ptr_read ];
            end
            1: begin
               out_buff_ptr_read<=out_buff_ptr_read+2;
