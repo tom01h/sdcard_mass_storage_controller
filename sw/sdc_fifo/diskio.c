@@ -10,13 +10,13 @@
 #include "diskio.h"		/* FatFs lower layer API */
 
 #include "lib.h"
-volatile unsigned char *SDTXCMD = ((volatile unsigned char *)0x9a102000);
-volatile unsigned char *SDRXCMD = ((volatile unsigned char *)0x9a102004);
-volatile unsigned char *SDTXDAT = ((volatile unsigned char *)0x9a102008);
-volatile unsigned char *SDRXDAT = ((volatile unsigned char *)0x9a10200c);
-volatile unsigned char *SDSTATS = ((volatile unsigned char *)0x9a102010);
-volatile unsigned char *SDCNTRL = ((volatile unsigned char *)0x9a102014);
-volatile unsigned char *SDTIMER = ((volatile unsigned char *)0x9a102018);
+static volatile unsigned char *SDTXCMD = ((volatile unsigned char *)0x9a102000);
+static volatile unsigned char *SDRXCMD = ((volatile unsigned char *)0x9a102004);
+static volatile unsigned char *SDTXDAT = ((volatile unsigned char *)0x9a102008);
+static volatile unsigned char *SDRXDAT = ((volatile unsigned char *)0x9a10200c);
+static volatile unsigned char *SDSTATS = ((volatile unsigned char *)0x9a102010);
+static volatile unsigned char *SDCNTRL = ((volatile unsigned char *)0x9a102014);
+static volatile unsigned char *SDTIMER = ((volatile unsigned char *)0x9a102018);
 
 #define BUSY 0x80
 #define CRC_TOKEN 0x29
